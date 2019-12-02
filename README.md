@@ -1,0 +1,1 @@
+# flutter_provider_architecture_starte
