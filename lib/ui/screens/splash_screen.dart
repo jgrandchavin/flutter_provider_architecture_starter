@@ -8,7 +8,34 @@ class SplashScreen extends StatelessWidget {
     return ViewModelProvider<SplashScreenViewModel>(
       model: SplashScreenViewModel(context: context),
       builder: (SplashScreenViewModel model) {
-        return Scaffold();
+        return Scaffold(
+          backgroundColor: Colors.black45,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                model.mainTitle,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                model.secondTitle,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        );
       },
     );
   }
